@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <img @click=openWhatsAppChat src="./assets/whatsapp.svg" class="iconWhatsapp"></img> 
     <a href="#" class="logo">
       <img src="./assets/HabannaHeader.png" alt="">
     </a>

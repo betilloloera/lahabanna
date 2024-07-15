@@ -3,15 +3,7 @@
 
     <section class="home" id="Home">
         <div class="content">
-            <h3>La mejor experiencia que puedas imaginar</h3>
-            <div class="contentContact">
-                <h2>Agenda tu cita</h2>
-                <h2>{{suc?suc.sucursaltel:''}}
-                    <img @click=openWhatsAppChat src="../assets/whatsapp.svg" class="iconWhatsapp"></img> 
-                    
-                </h2>
-                
-            </div>
+            <img class="imgH" src="../assets/info.jpg" alt="">
         </div>
     </section>
 
