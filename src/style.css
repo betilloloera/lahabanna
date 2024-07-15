@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+  --main-color: #d3ad7f;
+  --black: #131313;
+  --bg: #010103;
+  --border: .1rem solid rgba(255,255,255,.2);
+  --white:#fff
+}
+
+*{
+  font-family: 'Roboto',sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+  width: .8rem;
+}
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body{
+  background: var(--bg);
+}
+
+.header{
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  top: 0; left: 0;right: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.header .logo img{
+  height: 6rem;
+}
+
+.header .navbar a, .header .navbarMovile{
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.header .navbar a:hover, .header .navbarMovile a:hover{
+  color: var(--main-color);
+  border-bottom: .1rem solid var(--main-color);
+  color: #5c5c5c;
+  padding-bottom: .5rem;
+}
+
+.header .icons div{
+  color: #fff;
+  cursor: pointer;   
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+.header .icons div:hover{
+  color: var(--main-color);
+}
+
+#menu-btn{
+  display: none;
+}
+
+.header .search-form{
+  position: absolute;
+  top: 115%; right: 7%; 
+  background: #fff;
+  width: 50rem;
+  height: 5rem; 
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.header .search-form.active{
+  transform: scaleY(1);
+}
+
+.header .search-form input{
+  width: 100%;
+  height: 100%; 
+  font-size: 1.6;
+  color: var(--black);
+  padding: 1rem ;
+}
+
+.header .search-form input{
+  width: 100%;
+  height: 100%; 
+  font-size: 1.6;
+  color: var(--black);
+  padding: 1rem ;
+}
+
+.header .search-form label{
+  cursor: pointer;
+  font-size: 2.2rem;
+  margin-right: 1.5rem;
+  color:var(--black)
+}
+
+/* HOME SECTION */
+
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(/src/assets/mujerSex.jpg  ) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content
+{
+  max-width: 60rem;
+}
+
+.home .content .contentContact h2{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #ccc
+}
+
+.home .content h3
+{
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.home .content p
+{
+  font-size: 1rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
+
+
+
+section{
+  padding: 2rem 7%;
+} 
+
+
+
+/*SECTION ABOUT US*/
+
+
+.heading{
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+.about .row{
+  display: flex;
+  align-items: center;
+  background: var(--black);  
+  flex-wrap: wrap;
+} 
+
+.about .row .image{
+  flex: 1 1 45rem;
+} 
+
+.about .row .image img{
+  width: 100%;
+} 
+.about .row .content{
+  flex: 1 1 45rem;
+  padding: 2rem;
+} 
+
+.about .row .content p{
+  font-size: 1.6rem;
+  color: #ccc;
+  padding: 1rem 0;
+  line-height: 1.8;
+} 
+
+
+/* SECTION PRODUCTS */
+
+.products .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 1.5rem;
+}
+
+.products .box-container .box{
+  text-align: center;  
+  padding: 2rem;
+}
+
+.products .box-container .box .image{
+  padding: 2.5rem 0;
+}
+
+.products .box-container .box .image img{
+  height: 50rem;
+} 
+
+.navbarMovile{
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width:991px){
+  .navbarMovile{
+    display: block;
+    background-color: #202020 !important;
+  }
+
+  .menuItemText{
+    margin-left: 30px;
+  }
+
+  .navbarMovile .navbarMovileItem .menuItemIcon{
+    position: absolute;
+    left: 10px;
+  }
+
+  html{
+    font-size: 55%;
+  }
+  .header{
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width:991px){
+  #menu-btn{
+    display: inline-block;
+  }
+
+  .header .navbar, .header .navbarMovile{
+    position: absolute;
+    top:100%; right: -100%;
+    background: var(--white);
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+  .header .navbar a, .header .navbarMovile a{
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+  }
+
+  .header .navbar.active,.header .navbarMovile.active{
+    right: 0%;
+  }
+
+  .header .search-form{
+    width: 90%;
+    right: 2rem;
+  }
+
+  section{
+    padding: 2rem;
+  }
+
+  .home{
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .home .content h3{
+    font-size: 4.5rem; 
+  }
+  
+  .home .content p
+  {
+    font-size: 1.5rem;
+  }
+  
+ 
+}
+@media (max-width:450px){
+  html{
+    font-size: 50%;
+  }
+}
+
+
+/* pie de pagina */
+.footer{
+  background: var(--black);
+  text-align: center;
+}
+
+.footer .share{
+  padding: 1rem 0;
+}
+
+.footer .share a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  border: var(--border);
+  margin: .3rem;
+  border-radius: 50%;
+}
+
+
+.footer .share a:hover{
+  background-color: var(--main-color);
+}
+
+.mapFrame{
+  width: 100%;
+  height: 200px;
+}
