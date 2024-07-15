@@ -30,6 +30,6 @@ function setBody(query, variables) {
   return JSON.stringify({ query, variables });
 }
 
-module.exports = {
+export default {
   query
 }

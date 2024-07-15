@@ -1,5 +1,4 @@
 <template>
-  
   <header class="header">
     <a href="#" class="logo">
       <img src="./assets/HabannaHeader.png" alt="">
@@ -67,18 +66,14 @@
   import AboutUs from './components/AboutUs.vue';
   import Products from './components/Products.vue';
   import Footer from './components/footer.vue';
-  
-  // const gql = require.context('./services/graphql-client')
-  // const constants = require.context('./services/constants');
+
 
   import { ref } from 'vue';
   let NavClass = ref(0);
   let ShowInMovile = ref(false);  
   let ActiveSearch = ref(false);
   
-  
 
-  // gql.query(constants.GETALL_EMP,'');
 
   const ToggleMenu = ()=>{
     ShowInMovile.value = !ShowInMovile.value;
@@ -88,6 +83,10 @@
   const ToggleSearch = ()=>{
     ActiveSearch.value = !ActiveSearch.value;
     ShowInMovile.value = false;
+  }
+
+  function openWhatsAppChat() {
+    window.open('https://wa.me/6677808480', '_blank');
   }
 
 </script>
